@@ -2,13 +2,15 @@
 
 ![Airbnb Scraper](https://raw.githubusercontent.com/smoldesk/apify-scrapers/main/assets/airbnb/banner.webp)
 
-Scrape Airbnb listings for any city, neighborhood or list of listing URLs, with the price for your dates, full listing details, guest reviews and the 12-month availability calendar. No login, no browser, no API key. Runs on [Apify](https://apify.com/smoldesk/airbnb-scraper); you pay per result.
+Scrape Airbnb listings for any city (a whole city, past Airbnb's ~270-per-search limit), neighborhood, list of listing URLs or every listing of a host, with the price for your dates, full listing details, guest reviews and the 12-month availability calendar. No login, no browser, no API key. Runs on [Apify](https://apify.com/smoldesk/airbnb-scraper); you pay per result.
 
 ## What you get
 
 - **Listings**: name, type, city, coordinates, rating, review count, superhost and guest-favorite flags, photos, and the **price for your stay** (total, per night, nights, original price, and a breakdown with discounts, cleaning and resort fees) in 20 currencies.
 - **Full details** (on by default): description (also as Markdown), every amenity by group, house rules, safety and property info, sleeping arrangements, capacity, bedrooms, beds and bathrooms, six category ratings and the star distribution, every photo with its room, and the host (superhost, verified, years hosting, response rate and time, co-hosts).
-- **Guest reviews**: text, rating, date, language, English translation, stay length and the host's response.
+- **Guest reviews**: text, rating, date, language, translation, stay length, guest photos and the host's response. Newest, most relevant, highest or lowest rated first, from a date you choose.
+- **Hosts**: paste a host profile URL to get all their listings; optional full public profile (lives in, languages, work, verification, number of listings, review counts).
+- **21 languages**: listing texts and review translations from that country's Airbnb site.
 - **Availability calendar**: up to 12 months of open and booked nights, check-in/check-out days and minimum/maximum stay, with a booked-share summary per listing.
 - **Search filters**: dates, adults, children, infants, pets, type of place, price per night, bedrooms, beds, bathrooms. Or paste a search URL copied from Airbnb.
 
@@ -90,10 +92,10 @@ In our test, 240 listings in London and Bali with full details, 667 reviews and 
 
 ## Limits
 
-- About 270 listings per search (Airbnb's limit). Search neighborhoods or split by price for more.
+- Airbnb lists about 270 listings per search. Ask for more (or `maxListingsPerSearch: 0`) and the Actor splits the map area into smaller parts on its own.
 - Airbnb no longer shows nightly prices in its calendar, so the calendar has availability and stay rules only. Set dates for the stay price.
 - `daysBlocked` counts nights booked or blocked by the host; Airbnb doesn't tell them apart.
-- Check-in times and exact addresses are shown only after booking, so they're not included.
+- Check-in times and exact home addresses are shown only after booking, so they're not included (hotel addresses are).
 
 ## More scrapers
 
