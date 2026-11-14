@@ -99,4 +99,4 @@ In our test, 240 listings in London and Bali with full details, 667 reviews and 
 
 ## More scrapers
 
-Airbnb Scraper is one of 20 no-login scrapers by Smoldesk Studios. See the full list: [smoldesk/apify-scrapers](https://github.com/smoldesk/apify-scrapers).
+Airbnb Scraper is one of 21 no-login scrapers by Smoldesk Studios. See the full list: [smoldesk/apify-scrapers](https://github.com/smoldesk/apify-scrapers).
